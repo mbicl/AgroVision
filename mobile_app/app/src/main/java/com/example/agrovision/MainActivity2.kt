@@ -58,7 +58,6 @@ class MainActivity2 : AppCompatActivity() {
 
         // Create an instance of YourRequestModel with the data you want to send
         val requestModel = uploadPost(name,"931311480",url,"41.3500932","69.2083192")
-        Toast.makeText(this,"$name  $url",Toast.LENGTH_LONG).show()
         // Make the POST request
         val call = apiService.postDataUpload(requestModel)
         call!!.enqueue(object : Callback<YourResponseModel> {
@@ -76,15 +75,16 @@ class MainActivity2 : AppCompatActivity() {
                     val image2:String = responseBody!!.img2
                     // Convert byte array to Bitma
 
-                    // Set the Bitmap to the ImageView
-                    val imageView: ImageView = findViewById(R.id.iv_image1)
-                    val imageView2: ImageView = findViewById(R.id.iv_image2)
 
 
-                    image2.
+//                    binding.ivImage2.setImageResource()
 
-                    Glide.with(this@MainActivity2).load("R.drawable.$imageByteArray").into(binding.ivImage1)
-                    Glide.with(this@MainActivity2).load("R.drawable.$image2").into(binding.ivImage2)
+                    val resourceId = resources.getIdentifier(imageByteArray, "drawable", packageName)
+                    val resourceId2 = resources.getIdentifier(image2, "drawable", packageName)
+
+
+                    Glide.with(this@MainActivity2).load(resourceId).into(binding.ivImage1)
+                    Glide.with(this@MainActivity2).load(resourceId2).into(binding.ivImage2)
 
 
                     binding.tvKasallik.text=responseBody!!.name
