@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "629183352124",
+    "project_id": "agrovision-915ff",
+    "storage_bucket": "agrovision-915ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629183352124:android:5681a023f408d61b96e239",
+        "android_client_info": {
+          "package_name": "com.example.agrovision"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaEVmUvU4jED9eiQUTqRwAUv7hDh_AeAw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
